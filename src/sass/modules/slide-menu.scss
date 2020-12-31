@@ -1,0 +1,41 @@
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background-color: $textColor;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.8s all;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide-menu_active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.slide-menu__list {
+  text-align: center;
+}
+
+.slide-menu__link {
+  display: block;
+  color: #fff;
+  padding: 8px 0;
+  font-weight: lighter;
+  font-size: 13px;
+  transition: 0.3s;
+  &:hover {
+    color: darken(#fff, 32%);
+  }
+}
+
+.slide-menu__link_active {
+  text-decoration: underline;
+  color: darken(#fff, 32%);
+}

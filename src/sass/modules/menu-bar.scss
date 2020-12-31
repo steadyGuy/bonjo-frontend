@@ -1,0 +1,170 @@
+.menu-bar {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-color: transparent;
+  padding: 28px 0;
+  transition: 0.4s ease-in-out;
+  color: #fff;
+}
+
+.menu-bar_bg_black {
+  background-color: $textColor;
+}
+
+.logo {
+  margin: 0 auto;
+  img {
+    height: 32px;
+    width: 134px;
+  }
+}
+
+.navigation__menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.navigation__element {
+  margin-top: 4px; //небольшой отступ из-за логотипа
+  margin-left: 28px;
+  &:first-child {
+    margin-left: 30px;
+  }
+}
+
+.navigation__link {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    color: #646464;
+  }
+}
+
+.navigation__link_active {
+  color: #646464;
+}
+
+.menu-bar__extra-elements {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+  margin-top: 3px;
+}
+
+.top-cart {
+  margin-top: 1px;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  font-weight: 300;
+}
+
+.top-cart {
+  svg {
+    min-width: 21.5px;
+    min-height: 21px;
+  }
+}
+
+
+.top-cart__items {
+  margin-left: 6px;
+  color: #fff;
+}
+
+.top-cart__price {
+  color: #fff;
+}
+
+.top-cart-btn {
+  background-color: transparent;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  position: relative;
+  border: solid 1px transparent;
+  width: 100%;
+  display: flex;
+  &:hover {
+    border: solid 1px #fff;
+    .top-cart__delimiter {
+      background-color: #fff;
+    }
+  }
+  &:active {
+    top: 1px;
+  }
+}
+
+.top-cart__delimiter {
+  width: 1px;
+  height: 26px;
+  margin: 0 8px;
+  background-color: #242424;
+  transition: 0.3s;
+}
+
+.menu-bar__search-icon {
+  margin-right: 28px;
+}
+
+.navigation__hamburger {
+  margin-top: -8px;
+  height: 25px;
+  display: none;
+  position: relative;
+  z-index: 101;
+  .hamburger {
+    padding: 0;
+    margin: 15px 15px;
+  }
+}
+
+@media screen and (max-width: $desktopWidth) {
+
+  .navigation__hamburger {
+    display: block;
+  }
+
+  .navigation__menu  {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: $tableWidth) {
+
+  .menu-bar__search-icon {
+    margin-right: 14px;
+  }
+
+}
+
+@media screen and (max-width: $phoneWidth) {
+
+  .menu-bar {
+    grid-template-columns: 1fr 6fr 3fr;
+  }
+
+  .menu-bar__search-icon {
+    margin-right: 8px;
+  }
+
+  .menu-bar__extra-elements {
+    margin-right: 15px;
+  }
+
+  .cart__delimiter {
+    margin: 0 6px;
+  }
+
+}

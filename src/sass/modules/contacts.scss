@@ -1,0 +1,140 @@
+.contacts__indent {
+  margin-top: 40px;
+}
+
+.contacts__form {
+  margin: 0 auto;
+}
+
+.contacts__input {
+  width: 670px;
+  margin: 32px auto;
+  &:first-child {
+    margin-top: 48px;
+  }
+  input, textarea {
+    border: solid 1px #E0E0E0;
+    border-radius: 20px;
+    height: 42px;
+    box-sizing: border-box;
+    padding-left: 24px;
+    color: $textColor;
+    width: 670px;
+    display: block;
+    margin-top: 6px;
+    position: relative;
+    &::placeholder {
+      color: #BCBCBC;
+      font-family: 'Open Sans';
+      font-weight: 300;
+    }
+    &:focus {
+      border-color: $textColor;
+    }
+    &:active {
+      top: -1px;
+    }
+  }
+  textarea {
+    height: 280px;
+    padding-top: 8px;
+  }
+}
+
+.contacts__label {
+  display: block;
+  font-weight: bold;
+  margin-left: 12px;
+}
+
+.contacts__btn {
+  border: none;
+  position: relative;
+  button {
+    background-color: $textColor;
+    cursor: pointer;
+    border: solid 2px $textColor;
+    text-transform: uppercase;
+    padding-left: 70px;
+    padding-right: 70px;
+    &:hover {
+      border-color: $textColor;
+    }
+  }
+  &:active {
+    top: F1px;
+  }
+}
+
+.contanct__info {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts__box {
+  border: solid 1px #EAEAEA;
+  border-radius: 20px;
+  margin-left: 48px;
+  padding: 24px 38px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.contacts__title {
+  font-weight: bold;
+  display: block;
+  svg {
+    width: 32.5px;
+    height: 25px;
+    fill: $textColor;
+    margin-top: -2px;
+  }
+}
+
+.contacts__little-text {
+  margin-left: 28px;
+}
+
+.contacts__text {
+  margin-top: 12px;
+  font-weight: lighter;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: $tableWidth) {
+
+  .contacts__input {
+    width: 440px;
+    input, textarea {
+      width: 440px;
+    }
+  }
+
+  .contanct__info {
+    display: block;
+  }
+  
+  .contacts__box {
+    margin-left: 0;
+    margin-top: 32px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: $phoneWidth) {
+
+  .contacts__input {
+    width: 290px;
+    input, textarea {
+      width: 290px;
+    }
+  }
+
+
+}

@@ -1,0 +1,254 @@
+.gallery {
+  .shop-item__gallery {
+    .shop-item__control {
+      .shop-item__next {
+        right: 10px;
+      }
+      .shop-item__prev {
+        left: 10px;
+      }
+      svg {
+        width: 24px;
+        height: 45.5px;
+      }
+      .shop-item__prev, .shop-item__next {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        z-index: 2;
+        top: 45%;
+        fill: #646464;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          fill: #fff;
+        }
+      }
+    }
+    .slide {
+      div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 100;
+      }
+    }
+  }
+}
+
+.shop-item__ctrl {
+  display: flex;
+  justify-content: center;
+  div {
+    margin-top: 24px;
+    margin-left: 16px;
+    justify-content: center;
+    max-width: 85px;
+    max-height: 99px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-right: none;
+    &:first-child {
+      margin-left: 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $textColor;
+      opacity: 0.11;
+    }
+  }
+  .active {
+    &::before {
+      opacity: 0.90;
+      border: solid 2px $textColor
+    }
+  }
+}
+
+.shop-item__back-btn {
+  padding-top: 169px; //87px == height of navigation plus 82px
+  svg {
+    width: 34px;
+    height: 34px;
+    fill: $textColor;
+    margin-right: 6px;
+    transition: 0.3s;
+    position: relative;
+  }
+  a {
+    color: $textColor;
+    transition: 0.3s;
+    &:hover {
+      color: lighten($textColor, 55%);
+      svg {
+        fill: lighten($textColor, 22%);
+        padding-right: 4px;
+      }
+    }
+  }
+}
+
+.shop-item__content {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 5fr 7fr;
+  gap: 30px;
+  margin-top: 24px;
+  .slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+  }
+  .showing {
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+.shop-item__title {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.shop-item__price {
+  font-weight: bold;
+  font-size: 24px;
+  color: #444444;
+}
+
+.shop-item__sub-text {
+  font-weight: 300;
+  display: block;
+  color: #999999;
+  margin-top: -1px;
+}
+
+.shop-item__buttons {
+  display: flex;
+}
+
+.shop-item__btn {
+  background-color: $textColor;
+  margin-top: 32px;
+  border-color: $textColor;
+  text-transform: uppercase;
+  width: 100%;
+  &:hover {
+    border-color: $textColor; 
+  }
+}
+
+.shop-item__btn {
+  button {
+    width: 100%;
+    display: inline-block;
+    background-color: #fff;
+    font-weight: 300;
+    background-color: transparent;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 32px 0 32px 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 0;
+  }
+  a {
+    display: block;
+    padding: 14px 0;
+  }
+}
+
+.shop-item__btn-transparent {
+  background-color: #fff;
+  margin-left: 20px;
+  button {
+    color: $textColor;
+    padding: 14px 0;
+  }
+  &:hover {
+    background-color: $textColor;
+    button {
+      color: #fff;
+    }
+  }
+}
+
+.shop-item__text {
+  font-weight: 300;
+  margin-top: 21px;
+  ul, ol {
+    margin-left: 18px;
+  }
+}
+
+@media screen and (max-width: $desktopWidth) {
+
+  .shop-item__btn {
+    a {
+      padding: 14px 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+
+.shop-item__btn {
+    a {
+      padding: 14px 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: $tableWidth) {
+
+  .shop-item__btn {
+    a {
+      padding: 14px 0;
+    }
+  }
+
+  .shop-item__title {
+    margin-top: 24px;
+  }
+
+  .shop-item__content {
+      grid-template-columns: 1fr;
+    }
+
+  .shop-item__gallery {
+    min-height: 500px;
+  }
+
+}
+
+@media screen and (max-width: $phoneWidth) {
+
+  .shop-item__buttons {
+    display: block;
+  }
+
+  .shop-item__btn {
+    display: block;
+    a {
+      padding: 14px 0;
+    }
+  }
+
+  .shop-item__btn-transparent {
+    margin-left: 0;
+  }
+
+}

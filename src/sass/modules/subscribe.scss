@@ -1,0 +1,86 @@
+.subscribe {
+  text-align: center;
+}
+
+.subscribe_indent_big {
+  margin-top: 52px;
+}
+
+.subscribe__title {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.subscribe__text {
+  font-size: 18px;
+  font-weight: lighter;
+  margin-top: 6px;
+}
+
+.subscribe__form {
+  margin-top: 30px;
+}
+
+.subscribe__input {
+  border: solid 1px #222222;
+  color: #777777;
+  font-weight: lighter;
+  width: 400px;
+  box-shadow: 4px 3px 5px 0 #C6C6C6;
+  padding: 10px 4px 10px 20px;
+  &:focus {
+    border-color: #888888;
+  }
+}
+
+.subscribe__submit {
+  width: 165px;
+  padding: 9px 0 9px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  background-color: $textColor;
+  margin-left: 25px;
+  box-shadow: 4px 3px 5px 0 #C6C6C6;
+  border: solid 1px $textColor;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  &:hover {
+    background-color: transparent;
+    border-color: #888888;
+    color: $textColor;
+  }
+  &:active {
+    top: 2px;
+  }
+}
+
+@media screen and (max-width: $tableWidth) {
+
+  .subscribe__input {
+    width: 300px;
+  }
+
+  .subscribe__submit {
+    width: 125px;
+    margin-left: 20px;
+  }
+
+}
+
+@media screen and (max-width: $phoneWidth) {
+
+  .subscribe__input {
+    width: 85%;
+  }
+
+  .subscribe__submit {
+    width: 45%;
+    margin-left: 0;
+    margin-top: 18px;
+  }
+
+}

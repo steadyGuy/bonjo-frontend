@@ -1,0 +1,148 @@
+@import 'modules/hamburgers-settings.scss';
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+html {
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+		font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+		font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+		font-size: 14px;
+  }
+}
+
+input {
+  font-family: 'Open Sans';
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+body {
+  font-family: $mainFont;
+	font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $default-color
+}
+
+
+.wrap {
+  @include min-max(320px, $desktopWidth, 15px);
+}
+
+.container {
+  @include min-max(320px, 100%, 0);
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: smPhoneWidth;
+  }
+}
+
+.success-popup {
+  position: fixed;
+  width: 280px;
+  min-height: 125px;
+  left: 24px;
+  bottom: 24px;
+  z-index: 100;
+  padding: 22px;
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  opacity: 0;
+  border-radius: 5px;
+  p {
+    display: block;
+  }
+  svg {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 13px;
+    top: 13px;
+    fill: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+    &:hover {
+      transform: rotate(90deg)
+    }
+  }
+  div {
+    width: 45px;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  b {
+    text-transform: uppercase;
+  }
+  a {
+    color: #fff;
+  }
+  .success-popup__bottom a {
+    text-decoration: underline;
+    color: #CECECE;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .success-popup__title {
+    font-size: 14px;
+  }
+  .success-popup__bottom {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+}
+
+.animate-succsess {
+  opacity: 1;
+}
+
+// input, textarea {
+//   appearance: none;
+//   -webkit-appearance: none;
+// }
+
+// Modules
+@import "modules/top-text.scss";
+@import "modules/button.scss";
+@import "modules/breadcrumbs.scss";
+@import "modules/slider.scss";
+@import "modules/cart.scss";
+@import "modules/slide-menu.scss";
+@import "modules/footer.scss";
+@import "modules/menu-bar.scss";
+@import "modules/products.scss";
+@import "modules/home-slider.scss";
+@import "modules/header.scss";
+@import "modules/subscribe.scss";
+@import "modules/shop-item.scss";
+@import "modules/empty-cart.scss";
+@import "modules/contacts.scss";
+@import "modules/about.scss";
+@import "modules/checkout.scss";

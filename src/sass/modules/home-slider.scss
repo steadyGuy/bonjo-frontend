@@ -1,0 +1,80 @@
+.home-slider {
+  position: relative;
+  display: block;
+  height: 100vh;
+  max-width: 100%;
+  background-color: $textColor;
+  .slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+  }
+  .showing {
+    opacity: 1;
+    z-index: 2;
+  }
+  & .slide .slide-content {
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    & .slide-content-overlay {  
+      background-color: $textColor;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      z-index: 1;
+    }
+  }
+}
+
+.left-data {
+  max-width: 45%;
+  z-index: 3;
+  margin: 0 auto;
+  color: #646464;
+  text-transform: uppercase;
+  font-size: 48px;
+  h1 {
+    font-weight: bold;
+    line-height: 72px;
+    span {
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: $desktopWidth) {
+  .left-data {
+    h1 {
+      font-size: 40px;
+      line-height: 56px;
+    }
+  }
+
+  .home-slider {
+    & .slide .slide-content {
+      background-attachment: scroll;
+    }
+  }
+}
+
+@media screen and (max-width: $tableWidth) {
+  .left-data {
+    max-width: 70%;
+    h1 {
+      font-size: 32px;
+      line-height: 48px;
+    }
+  }
+
+}

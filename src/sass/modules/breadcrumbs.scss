@@ -1,0 +1,39 @@
+.breadcrumbs {
+  padding-top: 134px; //86 is heigh of nav
+  svg {
+    width: 11px;
+    height: 21px;
+    fill: $textColor;
+    transform: rotate(180deg);
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: -2px;
+  }
+}
+
+.breadcrumbs__list {
+  list-style-type: none;
+  display: flex;
+}
+
+.breadcrumbs__item {
+  &:last-child {
+    .breadcrumbs__link {
+      color: #CECECE;
+    }
+    svg {
+      display: none;
+    }
+  }
+}
+
+.breadcrumbs__link {
+  text-transform: uppercase;
+  color: $textColor;
+  font-size: 16px;
+  font-weight: 300;
+  transition: 0.3s;
+  &:hover {
+    color: #CECECE;
+  }
+}
